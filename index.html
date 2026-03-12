@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ShopBot — AI Shopping Assistant</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-grid"></div>
+<div class="orb o1"></div>
+<div class="orb o2"></div>
+
+<div class="wrap">
+  <div class="hdr">
+    <div class="hdr-left">
+      <div class="av">🛍️</div>
+      <div>
+        <div class="bn">Shop<span>Bot</span></div>
+        <div class="bs"><span class="sdot"></span>AI Shopping Assistant — Online</div>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <span class="hbadge">🛒 E-Commerce</span>
+      <span class="hbadge">AI Powered</span>
+      <span class="hbadge">Built by Ubaid</span>
+    </div>
+  </div>
+
+  <div class="chat" id="chat"></div>
+
+  <div class="qr" id="qr">
+    <div class="ql">Quick Questions</div>
+    <button class="qb" onclick="sq('Show me laptops under $500')">💻 Laptops</button>
+    <button class="qb" onclick="sq('I need wireless headphones')">🎧 Headphones</button>
+    <button class="qb" onclick="sq('What are your best deals today?')">🔥 Best Deals</button>
+    <button class="qb" onclick="sq('Track my order')">📦 Track Order</button>
+    <button class="qb" onclick="sq('What is your return policy?')">↩️ Returns</button>
+  </div>
+
+  <div class="inp">
+    <input type="text" id="ui" placeholder="Ask about products, prices, orders..." autocomplete="off">
+    <button class="sb" onclick="send()">➤</button>
+  </div>
+
+  <div class="cart-bar">
+    <div class="cart-info">🛒 Cart: <span id="cartCount">0 items</span> — Total: <span id="cartTotal">$0</span></div>
+    <button class="checkout-btn" onclick="checkout()">Checkout →</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
