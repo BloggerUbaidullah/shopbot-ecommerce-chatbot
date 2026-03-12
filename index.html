@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopBot — AI Shopping Assistant</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">Shop<span>Bot</span></div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#demo">Demo</a></li>
+      <li><a href="#how">How It Works</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('ci').focus()">Try Demo →</button>
+    <button class="nav-ham" id="hamBtn"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu">
+  <a href="#features">Features</a>
+  <a href="#demo">Live Demo</a>
+  <a href="#how">How It Works</a>
+  <a href="https://fiverr.com/s/e6aZVVP" target="_blank">Hire Me →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="demo">
+  <div class="hero-left">
+    <div class="hero-tag"><span class="dot"></span>🛍️ AI E-Commerce Chatbot</div>
+    <h1>Your Smart <em>Shopping</em> Assistant</h1>
+    <p>AI chatbot that helps customers find products, manage cart, and checkout — all through natural conversation. Boost sales 3x.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('ci').focus()">Try Live Demo</button>
+      <a href="https://fiverr.com/s/e6aZVVP" target="_blank" class="btn-ghost">Get This Bot →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hv">98%</div><div class="hl">Satisfaction</div></div>
+      <div class="hstat"><div class="hv">3x</div><div class="hl">More Sales</div></div>
+      <div class="hstat"><div class="hv">24/7</div><div class="hl">Always Online</div></div>
+    </div>
+  </div>
+
+  <!-- CHAT WIDGET -->
+  <div class="chat-widget">
+    <div class="cw-header">
+      <div class="cw-av">🛍️</div>
+      <div>
+        <div class="cw-name">ShopBot Assistant</div>
+        <div class="cw-status"><span class="dot"></span>Online — Ready to help</div>
+      </div>
+    </div>
+    <div class="cw-msgs" id="msgs"></div>
+    <div class="quick-r" id="qr">
+      <button class="qr-btn" onclick="sq('Show me laptops')">💻 Laptops</button>
+      <button class="qr-btn" onclick="sq('Best deals today')">🔥 Deals</button>
+      <button class="qr-btn" onclick="sq('Track my order')">📦 Track</button>
+      <button class="qr-btn" onclick="sq('Return policy')">↩️ Returns</button>
+    </div>
+    <div class="cw-input">
+      <input type="text" id="ci" placeholder="Ask about products..." autocomplete="off">
+      <button class="cw-send" onclick="send()">➤</button>
+    </div>
+    <div class="cart-bar">
+      <div class="cart-info">🛒 Cart: <b id="cc">0 items — $0</b></div>
+      <button class="cart-checkout" onclick="checkout()">Checkout →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="sec-tag">What It Does</div>
+  <div class="sec-title">Powerful Shopping Features</div>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-icon">🔍</div><div class="feat-title">Smart Product Search</div><div class="feat-desc">Customers type naturally and the bot finds exact products with price and brand filters.</div></div>
+    <div class="feat-card"><div class="feat-icon">🛒</div><div class="feat-title">Cart Management</div><div class="feat-desc">Add, remove, update items through chat. Full checkout flow without leaving the conversation.</div></div>
+    <div class="feat-card"><div class="feat-icon">📦</div><div class="feat-title">Order Tracking</div><div class="feat-desc">Real-time order status, delivery tracking, and notifications all through chat.</div></div>
+    <div class="feat-card"><div class="feat-icon">💰</div><div class="feat-title">Price Comparison</div><div class="feat-desc">Automatically shows best deals, discounts and alternatives to help customers save money.</div></div>
+    <div class="feat-card"><div class="feat-icon">↩️</div><div class="feat-title">Easy Returns</div><div class="feat-desc">Process returns and refunds directly through chat. No complicated forms needed.</div></div>
+    <div class="feat-card"><div class="feat-icon">📊</div><div class="feat-title">Sales Analytics</div><div class="feat-desc">Track conversation metrics, conversion rates, and popular products through dashboard.</div></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section" id="how">
+  <div class="sec-tag">Simple Process</div>
+  <div class="sec-title">How It Works</div>
+  <div class="steps-grid">
+    <div class="step-card"><div class="step-num">1</div><div class="step-title">Customer Messages</div><div class="step-desc">Customer types a question in natural language</div></div>
+    <div class="step-card"><div class="step-num">2</div><div class="step-title">AI Understands</div><div class="step-desc">Bot understands intent and searches catalog</div></div>
+    <div class="step-card"><div class="step-num">3</div><div class="step-title">Shows Results</div><div class="step-desc">Displays products with prices and details</div></div>
+    <div class="step-card"><div class="step-num">4</div><div class="step-title">Customer Buys</div><div class="step-desc">Customer adds to cart and completes checkout</div></div>
+  </div>
+</section>
+
+<!-- TECH -->
+<section class="section tech-section">
+  <div class="sec-tag">Technology</div>
+  <div class="sec-title">Built With</div>
+  <div class="tech-pills">
+    <div class="tech-pill">HTML5</div><div class="tech-pill">CSS3</div><div class="tech-pill">JavaScript</div>
+    <div class="tech-pill">REST API</div><div class="tech-pill">Webhook</div><div class="tech-pill">AI NLP</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Shop<span>Bot</span></div>
+    <div class="footer-links">
+      <a href="#features">Features</a><a href="#demo">Demo</a>
+      <a href="https://fiverr.com/s/e6aZVVP" target="_blank">Hire Me</a>
+    </div>
+    <div class="footer-copy">Built by <span>Ubaid Ullah</span> | fiverr.com/s/e6aZVVP</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
